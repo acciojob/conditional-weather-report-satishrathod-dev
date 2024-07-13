@@ -4,13 +4,13 @@ import WeatherDisplay from "./WeatherDisplay";
 
 const App = () => {
   const [weather, setWeather] = useState({
-    temperature: "0°C",
+    temperature: 0,
     conditions: "",
   });
 
   useEffect(() => {
-    const wetherData = { temperature: "25°C", conditions: "Sunny" };
-    setWeather(wetherData);
+    const weatherData = { temperature: 25, conditions: "Sunny" };
+    setWeather(weatherData);
   }, []);
 
   return (
