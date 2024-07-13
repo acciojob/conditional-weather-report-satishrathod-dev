@@ -5,12 +5,12 @@ const WeatherDisplay = ({ weather }) => {
   const { temperature, conditions } = weather;
 
   const temperatureStyle = {
-    color: temperature > 20 ? "red" : "blue",
+    color: parent(temperature) > 20 ? "red" : "blue",
   };
 
   return (
     <div>
-      <p style={temperatureStyle}>Temperature: {temperature}°C</p>
+      <p style={temperatureStyle}>Temperature: {temperature}</p>
       <p></p>
       <span>Conditions: {conditions}</span>
     </div>
