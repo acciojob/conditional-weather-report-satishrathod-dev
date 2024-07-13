@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./../styles/App.css";
+import WeatherDisplay from "./WeatherDisplay";
 
 const App = () => {
   const [weather, setWeather] = useState({ temperature: 0, conditions: "" });
@@ -7,7 +8,7 @@ const App = () => {
   useEffect(() => {
     const wetherData = { temperature: 25, conditions: "Sunny" };
     setWeather(wetherData);
-  });
+  }, []);
 
   return (
     <div>
