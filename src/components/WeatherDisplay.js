@@ -5,14 +5,16 @@ const WeatherDisplay = ({ weather }) => {
   const { temperature, conditions } = weather;
 
   const temperatureStyle = {
-    color: temperature > "20°C" ? "red" : "blue",
+    color: parseInt(temperature) > 20 ? "red" : "blue",
   };
 
   return (
     <div>
-      <p style={temperatureStyle}>Temperature: {temperature}</p>
-      <p></p>
-      <span>Conditions: {conditions}</span>
+      <p style={temperatureStyle}>
+        Temperature: {temperature}
+        <span>°C</span>
+      </p>
+      <p>Conditions: {conditions}</p>
     </div>
   );
 };
